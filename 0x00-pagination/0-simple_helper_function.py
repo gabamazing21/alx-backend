@@ -2,7 +2,7 @@
 """module that create pagination index"""
 
 
-def index_range (page, page_size):
+def index_range(page, page_size):
     """
     calculate the start and end indice of a given page numer
 
