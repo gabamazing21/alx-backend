@@ -33,7 +33,7 @@ class Server:
             raise AssertionError
         a, b = index_range(page, page_size)
         page_list = self.dataset()
-        if a >= len(page_list):
+        if a >= len(page_list) or b > len(page_list):
             return []
         return page_list[a:b]
 
