@@ -46,10 +46,10 @@ class Server:
             return []
         return page_list[a:b]
 
-    def get_hyper(self, page: int = 1, page_size: int = 10) -> dict:
+    def get_hyper(self, page: int = 1, page_size: int = 10) -> dict[str, any]:
         data_set = self.get_page(page, page_size)
         total_pages = math.ceil(len(self.dataset()) / page_size)
-        #adding the value to dict
+        # adding the value to dict
         hyper_dict = {}
         hyper_dict["page_size"] = len(data_set)
         hyper_dict["page"] = page
