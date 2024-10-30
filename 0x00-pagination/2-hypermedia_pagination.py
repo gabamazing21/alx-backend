@@ -36,7 +36,6 @@ class Server:
         if a >= len(page_list) or b > len(page_list):
             return []
         return page_list[a:b]
-    
 
     def get_hyper(self, page: int = 1, page_size: int = 10) -> dict:
         total_page = math.ceil(len(self.dataset()) / page_size)

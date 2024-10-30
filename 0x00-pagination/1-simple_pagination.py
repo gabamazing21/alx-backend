@@ -13,6 +13,7 @@ class Server:
     DATA_FILE = "Popular_Baby_Names.csv"
 
     def __init__(self):
+        """ initialize the private attribute"""
         self.__dataset = None
 
     def dataset(self) -> List[List]:
@@ -27,6 +28,14 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
+        """ get the list in that particular page
+
+            Args:
+                page_numer(int): the current page numer (1 - indexed)
+                page_size(int): number of item in a page
+            Return:
+                List: A list of the current page
+           """
         if (not isinstance(page, int) or not isinstance(page_size, int)):
             raise AssertionError
         if (page <= 0 or page_size <= 0):
