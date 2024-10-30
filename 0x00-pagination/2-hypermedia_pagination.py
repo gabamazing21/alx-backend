@@ -46,7 +46,7 @@ class Server:
             return []
         return page_list[a:b]
 
-    def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict[str, Any]:
+    def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict:
         data_set = self.get_page(page, page_size)
         total_pages = math.ceil(len(self.dataset()) / page_size)
         # adding the value to dict
