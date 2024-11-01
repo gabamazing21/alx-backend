@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """ BaseCaching module
 """
 from basecaching import BaseCaching
@@ -20,6 +20,4 @@ class BasicCache(BaseCaching):
 
     def get(self, key):
         """getter method"""
-        #if key is None or key not in self.cache_data:
-        #    return None
         return self.cache_data.get(key, None)
