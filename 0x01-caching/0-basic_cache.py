@@ -15,12 +15,13 @@ class BasicCache(BaseCaching):
         """
         setter method
         """
-        if (key is not None or item is not None):
+        if key is not None or item is not None:
             self.cache_data[key] = item
+        else:
+            return None
 
     def get(self, key):
         """getter method"""
-        if (key is not None or key not in self.cache_data):
-            pass
-        else:
-            return self.cache_data[key]
+        if key is None or key not in self.cache_data:
+            return None
+        return self.cache_data[key]
